@@ -1,10 +1,17 @@
-# Pre-made list of squared numbers
-numbers = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-print(numbers)
-# Separate odd and even squares
-even_squares = [sq for sq in numbers if sq % 2 == 0]
-odd_squares = [sq for sq in numbers if sq % 2 != 0]
+def filter_square_values(numbers):
+    odd_squares = []
+    even_squares = []
 
-# Print results
-print("Even squares:", even_squares)
-print("Odd squares:", odd_squares)
+    for num in numbers:
+        square = num ** 2
+        if square % 2 == 0:
+            even_squares.append(square)
+        else:
+            odd_squares.append(square)
+
+    print("Odd squares:", odd_squares)
+    print("Even squares:", even_squares)
+
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+filter_square_values(numbers)
